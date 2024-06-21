@@ -1,0 +1,239 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="h2">New Parcel</h1>
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <button class="btn btn-sm btn-outline-secondary"><b>?</b></button>
+    </div>
+  </div>
+</div>
+
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+          <li class="breadcrumb-item active">New Parcel</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col text-end fw-lighter">
+      <b>ParcelId</b>
+    </div>
+  </div>
+</div>
+
+<form action="/add" method="POST">
+  <div>
+    <h2>Sender Info</h2>
+  </div>
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="exp_name">Sender Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exp_name"
+        name="exp_name"
+        value=""
+        placeholder="Sender Name"
+        required
+      />
+    </div>
+
+    <div class="col">
+      <label for="exp_address">Sender Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exp_address"
+        name="exp_address"
+        value=""
+        placeholder="Sender Address"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="exp_tel">Sender Phone</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exp_tel"
+        name="exp_tel"
+        value=""
+        placeholder="Sender Phone"
+        required
+      />
+    </div>
+
+    <div class="col">
+      <label for="exp_email">Sender Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exp_email"
+        name="exp_email"
+        value=""
+        placeholder="Sender Email"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <h2>Receiver Info</h2>
+  </div>
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="dest_name">Receiver Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dest_name"
+        name="dest_name"
+        value=""
+        placeholder="Receiver Name"
+        required
+      />
+    </div>
+
+    <div class="col">
+      <label for="dest_address">Receiver Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dest_address"
+        name="dest_address"
+        value=""
+        placeholder="Receiver Address"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="dest_tel">Receiver Phone</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dest_tel"
+        name="dest_tel"
+        value=""
+        placeholder="Receiver Phone"
+        required
+      />
+    </div>
+
+    <div class="col">
+      <label for="dest_email">Receiver Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dest_email"
+        name="dest_email"
+        value=""
+        placeholder="Receiver Email"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <h2>Courser Info</h2>
+  </div>
+
+  <div class="d-flex">
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="courser_name">Courser Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="courser_name"
+          name="courser_name"
+          value=""
+          placeholder="Courser Name"
+          required
+        />
+      </div>
+
+      <div class="col">
+        <label for="courser_tel">Courser Phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="courser_tel"
+          name="courser_tel"
+          value=""
+          placeholder="Courser Phone"
+          required
+        />
+      </div>
+
+      <div class="col">
+        <label for="courser_email">Receiver Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="courser_email"
+          name="courser_email"
+          value=""
+          placeholder="Receiver Email"
+          required
+        />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2>Parcel Info</h2>
+  </div>
+
+  <div class="row form-group mb-4">
+    <div class="col">
+      <label for="parcel_type">Parcel type</label>
+      <select class="form-control" id="parcel_status" name="parcel_status">
+        <option class="form-control" value="In Charge">In Charge</option>
+        <option class="form-control" value="In Progress">In Progress</option>
+        <option class="form-control" value="Delivered">Delivered</option>
+      </select>
+    </div>
+
+    <div class="col">
+      <label for="parcel_status">Status</label>
+      <select class="form-control" id="parcel_type" name="parcel_type">
+        <option class="form-control" value="Standard">Standard</option>
+        <option class="form-control" value="Oversized">Oversized</option>
+        <option class="form-control" value="Hazardous">Hazardous</option>
+        <option class="form-control" value="Heavy">Heavy</option>
+        <option class="form-control" value="Fragile">Fragile</option>
+        <option class="form-control" value="Perishable">Perishable</option>
+        <option class="form-control" value="Valuable">Valuable</option>
+        <option class="form-control" value="Express">Express</option>
+        <option class="form-control" value="Return">Return</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group mb-4">
+    <label for="parcel_desc">Parcel Details</label>
+    <textarea
+      class="form-control"
+      name="parcel_desc"
+      id="parcel_desc"
+      cols="30"
+      rows="5"
+      placeholder="Parcel Details"
+    ></textarea>
+  </div>
+
+  <div class="form-group mb-4">
+    <button type="submit" class="btn btn-primary">Add Parcel</button>
+  </div>
+</form>

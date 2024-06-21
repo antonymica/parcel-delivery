@@ -1,0 +1,148 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="h2">
+    Parcel n° : <%= parcel.parcel_num %> is <%= parcel.parcel_type %>
+  </h1>
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary">
+        Share
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">
+        Export
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+          <li class="breadcrumb-item active"><%= parcel.parcel_num %></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col text-end fw-lighter">
+      <b>Last Updated <%= new Date(parcel.updatedAt).toUTCString() %> </b>
+      <b>ParcelId:</b> <%= parcel._id %>
+    </div>
+  </div>
+</div>
+
+<ul class="list-group pb-2 mb-5 border-bottom">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>N° : </b></div>
+      <div class="col"><%= parcel.parcel_num %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Type : </b></div>
+      <div class="col"><%= parcel.parcel_type %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Details:</b></div>
+      <div class="col"><%= parcel.parcel_desc %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Sender Name : </b></div>
+      <div class="col"><%= parcel.exp_name %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Sender Phone : </b></div>
+      <div class="col"><%= parcel.exp_tel %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Sender Email : </b></div>
+      <div class="col"><%= parcel.exp_email %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Sender Address : </b></div>
+      <div class="col"><%= parcel.exp_address %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Receiver Name : </b></div>
+      <div class="col"><%= parcel.dest_name %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Receiver Phone : </b></div>
+      <div class="col"><%= parcel.dest_tel %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Receiver Email : </b></div>
+      <div class="col"><%= parcel.dest_email %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Receiver Address : </b></div>
+      <div class="col"><%= parcel.dest_address %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Courser : </b></div>
+      <div class="col"><%= parcel.courser_name %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Courser Phone : </b></div>
+      <div class="col"><%= parcel.courser_tel %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Courser Email : </b></div>
+      <div class="col"><%= parcel.courser_email %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Date Created:</b></div>
+      <div class="col"><%= parcel.createdAt %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 150px"><b>Date Modified:</b></div>
+      <div class="col"><%= parcel.updatedAt %></div>
+    </div>
+  </li>
+</ul>

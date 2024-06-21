@@ -1,0 +1,75 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="h2">Search</h1>
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <a href="/add" class="btn btn-sm btn-outline-secondary">+ New Parcel</a>
+    </div>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <% if (parcels != "") { %>
+
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">N°</th>
+        <th scope="col">Type</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Status</th>
+        <th scope="col">Courser</th>
+        <th scope="col">Dest. Address</th>
+        <th scope="col" class="text-end">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% parcels.forEach(element => { %>
+      <tr class="align-middle">
+        <td><%= element.parcel_num %></td>
+        <td><%= element.parcel_type %></td>
+        <td><%= element.exp_name %></td>
+        <td><%= element.dest_name %></td>
+        <td class="text-primary"><%= element.parcel_status %></td>
+        <td><%= element.courser_name %></td>
+        <td><%= element.dest_address %></td>
+        <td>
+          <div class="d-flex flex-row justify-content-end gap-2">
+            <a
+              href="/view/<%= element._id %>"
+              type="button"
+              class="btn btn-primary btn-small"
+            >
+              <i class="bi bi-eye"></i>
+            </a>
+
+            <a
+              href="/edit/<%= element._id %>"
+              type="button"
+              class="btn btn-warning btn-small"
+            >
+              <i class="bi bi-pencil"></i>
+            </a>
+
+            <form
+              action="/edit/<%= element._id %>?_method=DELETE"
+              method="POST"
+              class="position-relative"
+            >
+              <button type="submit" class="btn btn-danger btn-small">
+                <i class="bi bi-person-x"></i>
+              </button>
+            </form>
+          </div>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <% } else { %>
+  <h2>No results found.</h2>
+  <% } %>
+</div>
